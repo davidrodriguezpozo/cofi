@@ -1,10 +1,7 @@
 
 # IMPORTS
-from models.Product import Product, default_products
-from models.Promotion import Promotion, promotions
+from models.Product import default_products
 from models.Checkout import Checkout
-import sys
-import tty
 
 
 if __name__ == '__main__':
