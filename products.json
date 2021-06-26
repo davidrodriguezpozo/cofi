@@ -1,0 +1,14 @@
+{
+    "VOUCHER": {
+        "price": 5,
+        "name": "Cofi Voucher"
+    },
+    "TSHIRT": {
+        "price": 20,
+        "name": "Cofi T-Shirt"
+    },
+    "MUG": {
+        "price": 7.5,
+        "name": "Cofi Coffee Muf"
+    }
+}
