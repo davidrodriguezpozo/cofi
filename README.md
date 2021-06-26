@@ -59,8 +59,8 @@ And the `products.json` file has the following structure:
 
 The `Promotion` class offers a wrapper for the promotions that will be applied (or possibly applied) to the products. There are 3 types of promotions: 
 
-1. `MxN`: Buy `M` products, pay `N`.
-2. `FIXED`: Buy more than `n` items of a given product, pay `X` for each one. 
+1. `MxN`: Buy `M` products, pay `N` (only for a single product).
+2. `FIXED`: Buy more than `n` items of a given product, pay `X` for each one (only for a single product). 
 3. `COMBINATION`: Buy the products `A, B, C, ...`, pay `X` for all of them.
 
 All promotions must be of type `PromoType` (in the `Promotion.py` file). Promotions are validated when they are created, with the method `validate_promo`.
