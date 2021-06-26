@@ -1,12 +1,22 @@
 # Cofi - Checkout with promotions
 
+### Table of contents
+
+1. [Info on modules and classes](#general-info-on-exposed-classes)
+2. [Run the code and tests](#run-the-code)
+
+
+
 ## Adding and computing promotions to several items in a given ticket. 
 
 This little project consists of several classes that allow a user to add products to a ticket, and given some promotion, obtain the total of this ticket. 
 
 The project can be inported to be used in a bigger project in order to have the `Checkout` class, which can be extended, and have a promotions module.
 
-***
+<br/>
+
+# General info on exposed classes
+
 ## Products
 
 The `Product` class offers a wrapper for given product. It is a very simple class to store the code, the name and the price of a given product. 
@@ -63,7 +73,6 @@ This method checks that the promotion parameters are valid (for more details ple
 The `Checkout` class is the one that contains the information about the products list. It contains the property `total` that computes the total of the ticket, with the promotions applied. 
 
 ***
-
 # Run the code
 
 ## Install dependencies 
