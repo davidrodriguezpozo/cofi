@@ -12,7 +12,7 @@ if __name__ == '__main__':
     next_product = True
     while next_product:
         product = input(
-            'Choose a product (Product code). Press Enter to get the total. \n')
+            'Choose a product (Product code). Press Enter to get the total or exit to end the checkout. \n')
         if(product == ''):
             print('Current ticket total:')
             print(ticket.total)

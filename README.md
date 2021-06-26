@@ -64,6 +64,14 @@ The `Checkout` class is the one that contains the information about the products
 
 # Run the code
 
+## Install dependencies 
+
+Run the following command to install the required dependencies of the project.
+
+```
+pip install -r requirements.txt
+```
+
 ## main
 
 Running

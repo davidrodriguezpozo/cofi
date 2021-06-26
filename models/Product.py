@@ -1,11 +1,12 @@
 import json
+from typing import Type
 
 
 class Product():
     def __init__(self, code, name, price):
         self.__name: str = name
         self.__code: str = code
-        self.__price: float = float(price)
+        self.price: float = price
 
     def __str__(self):
         return f'Product name: {self.name}. Product code: {self.code}. Price: {self.price} €'
@@ -22,9 +23,21 @@ class Product():
     def price(self) -> float:
         return self.__price
 
+    @price.setter
+    def price(self, value):
+        if(type(value) == 'str'):
+            raise TypeError('Value must be a positive number')
+        if(value < 0):
+            raise TypeError('Price must be positive')
+        self.__price = value
+
 
 with open('./products.json') as products_file:
-    json_products = json.load(products_file)
+    try:
+        json_products = json.load(products_file)
+    except Exception as e:
+        print('Products could not be loaded correctly, check JSON file')
+        print('Error', e)
 
 default_products = []
 for prod in json_products:
