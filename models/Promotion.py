@@ -89,7 +89,7 @@ class Promotion():
         """
         if (self.type == PromoType.MxN):
             [m, n] = self.getMpayN.split('x')
-            if(self.products[0].code in unique_products and unique_products[self.products[0].code] >= int(m)):
+            if(self.products[0].code in unique_products and unique_products[self.products[0].code] >= int(m) and int(m) > int(n)):
                 return True
             return False
 
