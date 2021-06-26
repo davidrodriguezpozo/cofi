@@ -72,7 +72,10 @@ This method checks that the promotion parameters are valid (for more details ple
 
 The `Checkout` class is the one that contains the information about the products list. It contains the property `total` that computes the total of the ticket, with the promotions applied. 
 
-***
+
+
+<br/>
+
 # Run the code
 
 ## Install dependencies 
