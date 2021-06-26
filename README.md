@@ -96,7 +96,7 @@ python main.py
 
 Will start a new checkout session, where products can be added to an empty ticket via the terminal. The total price of the ticket can be checked in any moment while adding products. 
 
-## tests
+## Tests
 
 Running 
 ```
