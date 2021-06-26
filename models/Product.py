@@ -43,8 +43,8 @@ with open('./products.json') as products_file:
     try:
         json_products = json.load(products_file)
     except Exception as e:
-        print('Products could not be loaded correctly, check JSON file')
-        print('Error', e)
+        raise Exception(
+            'Products could not be loaded correctly, check JSON file')
 
 default_products = []
 for prod in json_products:

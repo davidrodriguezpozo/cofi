@@ -33,7 +33,7 @@ class Promotion():
         """
         Checks if the promotion is valid. A promotion is valid if: 
 
-        FIXED: min_quantity is informed, and there is only one product in the list of products
+        FIXED and COMBINATION: min_quantity is informed, and there is only one product in the list of products
         MxN: M and N are both valid integers, and there is only one product (unique) in the list
 
         """
@@ -74,7 +74,7 @@ class Promotion():
 
         return products_list
 
-    def is_valid(self, unique_products: dict):
+    def is_valid(self, unique_products: dict) -> bool:
         """
         Args:
             unique_products: dictionary containing the product codes and the quantities of the list of products
@@ -103,6 +103,10 @@ class Promotion():
 
     def compute_discount(self, unique_products: dict) -> float:
         """
+        Args:
+            unique_products: dictionary containing the products of a checkout ticket.
+
+
         Given a list of products, compute the total discount applied by this promotion, in absolute value. 
 
         Example: 
