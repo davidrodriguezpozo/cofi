@@ -20,3 +20,8 @@ def test_change_promotion():
     promo.products.pop()
     with pytest.raises(AssertionError):
         promo.validate_promo()
+
+
+def test_invalid_type():
+    with pytest.raises(TypeError):
+        Promotion([default_products[0].code], 10, 'Non-valid type', 1, '2xa')

@@ -5,7 +5,7 @@ import numpy as np
 
 
 class PromoType(Enum):
-    COMBINATION = 0  # Combination of products for whihc you get a discount
+    COMBINATION = 0  # Combination of products for which you get a discount
     MxN = 1          # Promotion like 2x1, 3x2...
     FIXED = 2        # Promotion with fixed price (more than 3 -> 19€)
 
@@ -38,6 +38,9 @@ class Promotion():
         elif(self.type == PromoType.COMBINATION):
             assert self.min_quantity is not None
             assert len(np.unique([prod.code for prod in self.products])) > 1
+
+        else:
+            raise TypeError('Type of promotion is not valid')
 
     def add_products(self, product_codes: List[str]):
         products_list = []
