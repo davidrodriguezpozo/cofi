@@ -53,6 +53,35 @@ The `Promotion` class offers a wrapper for the promotions that will be applied (
 
 All promotions must be of type `PromoType` (in the `Promotion.py` file). Promotions are validated when they are created, with the method `validate_promo`.
 
+This method checks that the promotion parameters are valid (for more details please see file `Promotion.py`).
+
+***
+## Checkout
+
+The `Checkout` class is the one that contains the information about the products list. It contains the property `total` that computes the total of the ticket, with the promotions applied. 
+
+***
+
+# Run the code
+
+## main
+
+Running
+
+```
+python main.py
+```
+
+Will start a new checkout session, where products can be added to an empty ticket via the terminal. The total price of the ticket can be checked in any moment while adding products. 
+
+## tests
+
+Running 
+```
+pytest tests
+```
+
+Will run all the tests in the folder `tests`
 
 
 
