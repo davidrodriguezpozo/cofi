@@ -4,6 +4,8 @@
 
 This little project consists of several classes that allow a user to add products to a ticket, and given some promotion, obtain the total of this ticket. 
 
+The project can be inported to be used in a bigger project in order to have the `Checkout` class, which can be extended, and have a promotions module.
+
 ***
 ## Products
 

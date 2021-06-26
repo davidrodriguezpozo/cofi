@@ -1,8 +1,15 @@
 import json
-from typing import Type
 
 
 class Product():
+    """
+    This class wraps the information of a given product.
+    This information is:
+    - Code
+    - Name
+    - Price
+    """
+
     def __init__(self, code, name, price):
         self.__name: str = name
         self.__code: str = code
