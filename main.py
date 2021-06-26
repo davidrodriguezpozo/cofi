@@ -13,17 +13,16 @@ if __name__ == '__main__':
     while next_product:
         product = input(
             'Choose a product (Product code). Press Enter to get the total or exit to end the checkout. \n')
-        if(product == ''):
+        if(product.strip() == ''):
             print('Current ticket total:')
             print(ticket.total)
-        elif(product == 'exit'):
+        elif(product.strip() == 'exit'):
             next_product = False
         else:
-            ticket.scan(product)
+            ticket.scan(product.strip())
 
     print('--------------------')
     print('PRODUCTS in ticket:')
-    print([str(prod) for prod in ticket.products])
+    print(ticket.unique_products)
     print('--------------------')
-    print('TICKET TOTAL')
-    print(ticket.total)
+    print(f'TICKET TOTAL: {ticket.total}')

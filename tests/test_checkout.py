@@ -76,7 +76,3 @@ def test_ticket_3():
     promotions.pop()
 
     assert ticket.total == 10
-
-
-def test_ticket_4():
-    ticket = Checkout()
